@@ -22,7 +22,7 @@ function makeAircraftDivIcon(f) {
     className: "", // prevent default leaflet styles
     html: `<div style="
       font-size: 22px;
-      transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%) rotate(${Number.isFinite(f?.trueTrack) ? f.trueTrack : 0}deg);
       line-height: 1;
       text-shadow: 0 0 3px #fff;
     ">${emoji}</div>`,
@@ -145,11 +145,11 @@ function classifyAircraft(f) {
   }
 
   // Commercial airlines
-  if (cs.match(/AAL|DAL|UAL|SWA|JBU|FFT|ASA|POE|NKS|ROU|AAY|SCX|LPE|VOI|TAP|GXA|CFG|PDT|EIN|BAW|KAL|AFR|JSX|MXY|FLE|ACA|ENY|WJA|TAM|TAI|EDV|BHS|VXP|AVA|RPA/)) {
+  if (cs.match(/AAL|DAL|UAL|SWA|JBU|FFT|ASA|POE|NKS|ROU|AAY|SCX|LPE|VOI|TAP|GXA|CFG|PDT|EIN|BAW|KAL|AFR|JSX|MXY|FLE|ACA|ENY|WJA|TAM|TAI|EDV|BHS|VXP|AVA|RPA|TFL/)) {
     return "Passenger";
   }
 // Business jet
-if (cs.match(/EJA|LXJ|JTL|ASP|RNI|SGX|VJA|EJM|KOW|RKJ|NEW|HPJ/)) {
+if (cs.match(/EJA|LXJ|JTL|ASP|RNI|SGX|VJA|EJM|KOW|RKJ|NEW|HPJ|TCN/)) {
   return "Business Jet"
   }
  
@@ -215,7 +215,11 @@ if (cs.match(/FDX|UPS|GTI|CKS|CSB|ABX/)) {
 
     {flights.map((f) =>
       f.latitude && f.longitude ? (
-        <Marker key={f.icao24} position={[f.latitude, f.longitude]}>
+      <Marker
+  key={f.icao24}
+  position={[f.latitude, f.longitude]}
+  icon={makeAircraftDivIcon(f)}
+>
           <Popup>
             <b>{f.callsign || "Unknown"}</b>
             <br />
