@@ -32,6 +32,7 @@ function makeAircraftDivIcon(f) {
 }
 function AircraftPhoto({ hex }) {
   const [photo, setPhoto] = useState(null);
+  const [info, setInfo] = useState(null);   //
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -39,6 +40,7 @@ function AircraftPhoto({ hex }) {
   setError(true);
   return;
 }
+setInfo(null);
 
    fetch(`https://api.planespotters.net/pub/photos/hex/${encodeURIComponent(hex.toLowerCase())}`)
       .then(res => res.json())
@@ -50,6 +52,13 @@ function AircraftPhoto({ hex }) {
         }
       })
       .catch(() => setError(true));
+      fetch(`https://api.planespotters.net/pub/aircraft/hex/${encodeURIComponent(hex.toLowerCase())}`)
+  .then(res => res.json())
+  .then(data => {
+    setInfo(data);
+  })
+  .catch(() => setInfo(null));
+
 }, [hex]);
 
   if (error) return <div>No aircraft photo</div>;
@@ -62,6 +71,16 @@ function AircraftPhoto({ hex }) {
         alt="Aircraft"
         style={{ width: "100%", borderRadius: "8px" }}
       />
+      <div style={{ fontSize: 12, marginTop: 6 }}>
+  {info?.aircraft?.model && (
+  <div><strong>Model:</strong> {info.aircraft.model}</div>
+)}
+{info?.aircraft?.registration && (
+  <div><strong>Reg:</strong> {info.aircraft.registration}</div>
+)}
+
+</div>
+
       <small>
         © {photo.photographer}{" "}
         <a href={photo.link} target="_blank" rel="noreferrer">
