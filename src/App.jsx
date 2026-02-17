@@ -1,8 +1,8 @@
+
 import { MapContainer, TileLayer, Marker, Popup, LayersControl } from "react-leaflet";
 import * as L from "leaflet";
 import { useEffect, useState, useRef } from "react";
 import planeBg from "./assets/a320.jpg";
-
 
 function aircraftEmoji(f) {
   // Pick what you already have available in your data
@@ -23,6 +23,7 @@ function makeAircraftDivIcon(f) {
     html: `<div style="
       font-size: 22px;
      transform: translate(-50%, -50%) rotate(${Number.isFinite(f?.trueTrack) ? f.trueTrack : 0}deg);
+
       line-height: 1;
       text-shadow: 0 0 3px #fff;
     ">${emoji}</div>`,
@@ -145,7 +146,7 @@ function classifyAircraft(f) {
   }
 
   // Commercial airlines
-  if (cs.match(/AAL|DAL|UAL|SWA|JBU|FFT|ASA|POE|NKS|ROU|AAY|SCX|LPE|VOI|TAP|GXA|CFG|PDT|EIN|BAW|KAL|AFR|JSX|MXY|FLE|ACA|ENY|WJA|TAM|TAI|EDV|BHS|VXP|AVA|RPA|TFL/)) {
+  if (cs.match(/AAL|DAL|UAL|SWA|JBU|FFT|ASA|POE|NKS|ROU|AAY|SCX|LPE|VOI|TAP|GXA|CFG|PDT|EIN|BAW|KAL|AFR|JSX|MXY|FLE|ACA|ENY|WJA|TAM|TAI|EDV|BHS|VXP|AVA|RPA|TFL|THY/)) {
     return "Passenger";
   }
 // Business jet
