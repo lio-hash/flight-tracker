@@ -22,6 +22,7 @@ function makeAircraftDivIcon(f) {
     className: "", // prevent default leaflet styles
     html: `<div style="
       font-size: 22px;
+     display: inline-block;
      transform: translate(-50%, -50%) rotate(${Number.isFinite(f?.trueTrack) ? f.trueTrack : 0}deg);
 
       line-height: 1;
