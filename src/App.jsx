@@ -1,5 +1,5 @@
 
-import { MapContainer, TileLayer, Marker, Popup, LayersControl } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, LayersControl, Polyline } from "react-leaflet";
 import * as L from "leaflet";
 import { useEffect, useState, useRef } from "react";
 import planeBg from "./assets/a320.jpg";
@@ -103,7 +103,41 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState("");
   const [lastUpdated, setLastUpdated] = useState("");
+  const [trails, setTrails] = useState({});
     const alertedIcaoRef = useRef(new Set());
+    useEffect(() => {
+  setTrails((prev) => {
+    const next = { ...prev };
+
+    // add/update points for every current flight
+    for (const f of flights) {
+      if (!f?.icao24 || f.latitude == null || f.longitude == null) continue;
+
+      const id = f.icao24;
+      const pt = [f.latitude, f.longitude];
+
+      const arr = next[id] ? [...next[id]] : [];
+      const last = arr[arr.length - 1];
+
+      // only add if changed
+      if (!last || last[0] !== pt[0] || last[1] !== pt[1]) arr.push(pt);
+
+      // keep last N points (trail length)
+      const MAX = 60;
+      if (arr.length > MAX) arr.splice(0, arr.length - MAX);
+
+      next[id] = arr;
+    }
+
+    // remove trails for planes no longer in the list
+    const seen = new Set(flights.map((f) => f?.icao24).filter(Boolean));
+    for (const id of Object.keys(next)) {
+      if (!seen.has(id)) delete next[id];
+    }
+
+    return next;
+  });
+}, [flights]);
 function aircraftPhotoLink(f) {
   if (!f?.icao24) return null;
  return `https://www.planespotters.net/hex/${f.icao24}`;
@@ -214,8 +248,17 @@ if (cs.match(/FDX|UPS|GTI|CKS|CSB|ABX/)) {
   </LayersControl.BaseLayer>
 </LayersControl>
 
-
+{Object.entries(trails).map(([id, pts]) =>
+  pts.length >= 2 ? (
+    <Polyline
+      key={`trail-${id}`}
+      positions={pts}
+      pathOptions={{ weight: 3, opacity: 0.9 }}
+    />
+  ) : null
+)}
     {flights.map((f) =>
+    
       f.latitude && f.longitude ? (
       <Marker
   key={f.icao24}
