@@ -94,7 +94,13 @@ setInfo(null);
 }
 
 
-
+const airports = [
+  { icao: "KPBI", name: "Palm Beach Intl", lat: 26.6832, lon: -80.0956 },
+  { icao: "KFLL", name: "Fort Lauderdale–Hollywood Intl", lat: 26.0726, lon: -80.1527 },
+  { icao: "KMIA", name: "Miami Intl", lat: 25.7959, lon: -80.2870 },
+  { icao: "KLNA", name: "Lantana", lat: 26.5930, lon: -80.0851 },
+  { icao: "KBCT", name: "Boca Raton", lat: 26.3785, lon: -80.1077 },
+];
 export default function App() {
   const [filter, setFilter] = useState("all");
   const [lat, setLat] = useState(26.649509);
@@ -247,7 +253,15 @@ if (cs.match(/FDX|UPS|GTI|CKS|CSB|ABX/)) {
     />
   </LayersControl.BaseLayer>
 </LayersControl>
-
+{/* ✈️ Airports */}
+{airports.map((ap) => (
+  <Marker key={ap.icao} position={[ap.lat, ap.lon]}>
+    <Popup>
+      <b>{ap.icao}</b><br />
+      {ap.name}
+    </Popup>
+  </Marker>
+))}
 {Object.entries(trails).map(([id, pts]) =>
   pts.length >= 2 ? (
     <Polyline
