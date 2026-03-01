@@ -120,6 +120,11 @@ const airports = [
   { icao: "KBWI", name: "Baltimore/Washington International Thurgood Marshall Airport", lat: 39.175361, lon: -76.668333 },
   { icao: "KDCA", name: "Ronald Reagan Washington National Airport", lat: 38.852083, lon: -77.037722 },
   { icao: "KORD", name: "Chicago O'Hare International Airport", lat: 41.974162, lon: -87.907321 },
+  { icao: "KMDW", name: "Chicago Midway International Airport", lat: 41.785972, lon: -87.752906 },
+  { icao: "KDEN", name: "Denver International Airport", lat: 39.856096, lon: -104.673737 },
+  { icao: "KSEA", name: "Seattle-Tacoma International Airport", lat: 47.448936, lon: -122.309311 },
+  { icao: "KMEM", name: "Memphis International Airport", lat: 35.042417, lon: -89.976667 },
+  { icao: "KMSP", name: "Minneapolis–Saint Paul International Airport", lat: 44.884803, lon: -93.222327 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
