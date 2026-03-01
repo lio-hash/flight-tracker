@@ -140,6 +140,8 @@ const airports = [
   { icao: "KALB", name: "Albany International Airport", lat: 42.7483, lon: -73.8027 },
   { icao: "KBUF", name: "Buffalo Niagara International Airport", lat: 42.9405, lon: -78.7322 },
   { icao: "KHPN", name: "Westchester County Airport", lat: 41.0670, lon: -73.7076 },
+  { icao: "KSWF", name: "Stewart International Airport", lat: 41.5041, lon: -74.1048 },
+  { icao: "KISP", name: "Long Island MacArthur Airport", lat: 40.7952, lon: -73.1002 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
