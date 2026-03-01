@@ -103,6 +103,11 @@ const airports = [
   { icao: "KMCO", name: "Orlando International Airport", lat: 28.424216, lon: -81.310522 },
   { icao: "KJFK", name: "John F. Kennedy International Airport", lat: 40.644637, lon: -73.779175 },
   { icao: "KLGA", name: "LaGuardia Airport", lat: 40.776225, lon: -73.874291 },
+  { icao: "KBOS", name: "Boston Logan International Airport", lat: 42.365474, lon: -71.009645 },
+  { icao: "KEWR", name: "Newark Liberty International Airport", lat: 40.688493, lon: -74.176742 },
+  { icao: "KPHX", name: "Phoenix Sky Harbor International Airport", lat: 33.435215, lon: -112.010179 },
+  { icao: "KLAX", name: "Los Angeles Internationl Airport", lat: 33.942151, lon:  -118.403587 },
+  { icao: "KSFO", name: "San Francisco International Airport", lat: 37.619293, lon: -122.381256 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
