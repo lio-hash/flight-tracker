@@ -102,6 +102,7 @@ const airports = [
   { icao: "KBCT", name: "Boca Raton Airport", lat: 26.3785, lon: -80.1077 },
   { icao: "KMCO", name: "Orlando International Airport", lat: 28.424216, lon: -81.310522 },
   { icao: "KJFK", name: "John F. Kennedy International Airport", lat: 40.644637, lon: -73.779175 },
+  { icao: "KLGA", name: "LaGuardia Airport", lat: 40.776225, lon: -73.874291 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
