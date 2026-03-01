@@ -108,6 +108,11 @@ const airports = [
   { icao: "KPHX", name: "Phoenix Sky Harbor International Airport", lat: 33.435215, lon: -112.010179 },
   { icao: "KLAX", name: "Los Angeles Internationl Airport", lat: 33.942151, lon:  -118.403587 },
   { icao: "KSFO", name: "San Francisco International Airport", lat: 37.619293, lon: -122.381256 },
+  { icao: "KIAH", name: "George Bush Intercontinental Airport", lat: 29.993313, lon: -95.341399 },
+  { icao: "KDFW", name: "Dallas Fort Worth International Airport", lat: 32.892895, lon: -97.038470 },
+  { icao: "KCLT", name: "Charlotte Douglas International Airport", lat: 35.216312, lon: -80.952918 },
+
+
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
