@@ -148,13 +148,19 @@ const airports = [
   {icao: "MROC", name: "Juan Santamaría International Airport", lat: 9.9939, lon: -84.2088 },
   {icao: "MMMX", name: "Mexico City International Airport", lat: 19.4361, lon: -99.0719 },
   {icao: "MMUN", name: "Cancún International Airport", lat: 21.0365, lon: -86.8771 },
-  {icao: "MMGL", name: "General Rafael Buelna International Airport", lat: 22.1568, lon: -105.2583 },
+  {icao: "MMGL", name: "General Rafael Buelna International Airport", lat: 19.144860, lon: -96.186609 },
   {icao: "MMMT", name: "General Francisco J. Mujica International Airport", lat: 19.8497, lon: -102.2556 },
   {icao: "MMMY", name: "General Mariano Escobedo International Airport", lat: 25.7781, lon: -100.1067 },
   {icao: "MMPR", name: "Licenciado Gustavo Díaz Ordaz International Airport", lat: 20.8864, lon: -105.2542 },
   {icao: "MMES", name: "General Rodolfo Sánchez Taboada International Airport", lat: 32.5149, lon: -117.0382 },
   {icao: "MMHO", name: "General Ignacio Pesqueira García International Airport", lat: 29.0958, lon: -110.9617 },
   {icao: "MMBT", name: "General Abelardo L. Rodríguez International Airport", lat: 32.5336, lon: -116.9805 },
+  {icao: "MMTJ", name: "General Francisco Javier Mina International Airport", lat: 22.2456, lon: -97.8708 },
+  {icao: "MMAN", name: "Alberto Acuña Ongay International Airport", lat: 21.7056, lon: -102.3172 },
+  {icao: "MMVR", name: "General Heriberto Jara International Airport", lat: 19.1458, lon: -96.1872 },
+  {icao: "MMCT", name: "General Mariano Matamoros Airport", lat: 18.6111, lon: -99.2617 },
+  {icao: "MMCL", name: "General José María Yáñez International Airport", lat: 24.8319, lon: -107.3942 },
+  {icao: "MMMD", name: "General Guadalupe Victoria International Airport", lat: 24.125808, lon: -104.533531 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
