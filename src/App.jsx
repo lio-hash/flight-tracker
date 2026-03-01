@@ -142,6 +142,7 @@ const airports = [
   { icao: "KHPN", name: "Westchester County Airport", lat: 41.0670, lon: -73.7076 },
   { icao: "KSWF", name: "Stewart International Airport", lat: 41.5041, lon: -74.1048 },
   { icao: "KISP", name: "Long Island MacArthur Airport", lat: 40.7952, lon: -73.1002 },
+  { icao: "TJSJ", name: "Luis Muñoz Marín International Airport", lat: 18.4394, lon: -66.0018 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
@@ -217,14 +218,8 @@ function aircraftPhotoLink(f) {
 function classifyAircraft(f) {
   const cs = (f.callsign || "").toUpperCase();
 
-  // Military / government patterns
-  if (
-    cs.startsWith("RCH") ||    // USAF Reach 
-    cs.startsWith("SHELL") ||  // Tankers
-    cs.startsWith("MC") ||     // Marine Corps
-    cs.startsWith("NAVY") ||
-    cs.startsWith("ARMY") 
-  ) {
+ // Military/Government
+if (cs.match(/SAM|SCH|SCHD|SCHM|SCHP|RCH/)) {
     return "Military";
   }
 
