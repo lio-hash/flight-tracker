@@ -17,7 +17,7 @@ function aircraftEmoji(f) {
 }
 
 function makeAircraftDivIcon(f) {
-  const emoji = aircraftEmoji(f);
+  const emoji = f.onGround ? "🛬" : aircraftEmoji(f);
   return L.divIcon({
     className: "", // prevent default leaflet styles
     html: `<div style="
@@ -95,11 +95,13 @@ setInfo(null);
 
 
 const airports = [
-  { icao: "KPBI", name: "Palm Beach Intl", lat: 26.6832, lon: -80.0956 },
-  { icao: "KFLL", name: "Fort Lauderdale–Hollywood Intl", lat: 26.0726, lon: -80.1527 },
-  { icao: "KMIA", name: "Miami Intl", lat: 25.7959, lon: -80.2870 },
-  { icao: "KLNA", name: "Lantana", lat: 26.5930, lon: -80.0851 },
-  { icao: "KBCT", name: "Boca Raton", lat: 26.3785, lon: -80.1077 },
+  { icao: "KPBI", name: "West Palm Beach International Airport", lat: 26.6832, lon: -80.0956 },
+  { icao: "KFLL", name: "Fort Lauderdale–Hollywood International Airport", lat: 26.0726, lon: -80.1527 },
+  { icao: "KMIA", name: "Miami International Airport", lat: 25.7959, lon: -80.2870 },
+  { icao: "KLNA", name: "Palm Beach County Park Airport", lat: 26.5930, lon: -80.0851 },
+  { icao: "KBCT", name: "Boca Raton Airport", lat: 26.3785, lon: -80.1077 },
+  { icao: "KMCO", name: "Orlando International Airport", lat: 28.424216, lon: -81.310522 },
+  { icao: "KJFK", name: "John F. Kennedy International Airport", lat: 40.644637, lon: -73.779175 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
@@ -191,7 +193,7 @@ function classifyAircraft(f) {
     return "Passenger";
   }
 // Business jet
-if (cs.match(/EJA|LXJ|JTL|ASP|RNI|SGX|VJA|EJM|KOW|RKJ|NEW|HPJ|TCN/)) {
+if (cs.match(/EJA|LXJ|JTL|ASP|RNI|SGX|VJA|EJM|KOW|RKJ|NEW|HPJ|TCN|PVA/)) {
   return "Business Jet"
   }
  
@@ -314,6 +316,7 @@ if (cs.match(/FDX|UPS|GTI|CKS|CSB|ABX/)) {
             <div style={{ fontFamily: "Arial" }}>
               <div><b>{f.callsign || f.icao24}</b></div>
               <div>Country: {f.originCountry}</div>
+              <div>On ground: {f.onGround ? "Yes" : "No"}</div>
               <div>Alt (m): {f.geoAltitude ?? "?"}</div>
               <div>Speed (m/s): {f.velocity ?? "?"}</div>
               <div>Track: {f.trueTrack ?? "?"}</div>
@@ -337,7 +340,8 @@ if (cs.match(/FDX|UPS|GTI|CKS|CSB|ABX/)) {
   <option value="Cargo">Cargo</option>
   <option value="General Aviation">General Aviation</option>
 </select>
-
+<option value="On Ground">On Ground</option>
+<option value="In Air">In Air</option>
         {lastUpdated && <span>Last updated: {lastUpdated}</span>}
       </div>
 
