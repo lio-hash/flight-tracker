@@ -143,6 +143,11 @@ const airports = [
   { icao: "KSWF", name: "Stewart International Airport", lat: 41.5041, lon: -74.1048 },
   { icao: "KISP", name: "Long Island MacArthur Airport", lat: 40.7952, lon: -73.1002 },
   { icao: "TJSJ", name: "Luis Muñoz Marín International Airport", lat: 18.4394, lon: -66.0018 },
+  { icao: "MKJP", name: "Norman Manley International Airport", lat: 17.9359, lon: -76.7878 },
+  {icao: "TTPP", name: "Piarco International Airport", lat: 10.5959, lon: -61.3372 },
+  {icao: "MROC", name: "Juan Santamaría International Airport", lat: 9.9939, lon: -84.2088 },
+  {icao: "MMMX", name: "Mexico City International Airport", lat: 19.4361, lon: -99.0719 },
+  {icao: "MMUN", name: "Cancún International Airport", lat: 21.0365, lon: -86.8771 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
@@ -228,7 +233,7 @@ if (cs.match(/SAM|SCH|SCHD|SCHM|SCHP|RCH/)) {
     return "Passenger";
   }
 // Business jet
-if (cs.match(/EJA|LXJ|JTL|ASP|RNI|SGX|VJA|EJM|KOW|RKJ|NEW|HPJ|TCN|PVA/)) {
+if (cs.match(/EJA|LXJ|JTL|ASP|RNI|SGX|VJA|EJM|KOW|RKJ|NEW|HPJ|TCN|PVA|KNT/)) {
   return "Business Jet"
   }
  
