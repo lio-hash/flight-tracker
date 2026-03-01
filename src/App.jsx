@@ -111,7 +111,9 @@ const airports = [
   { icao: "KIAH", name: "George Bush Intercontinental Airport", lat: 29.993313, lon: -95.341399 },
   { icao: "KDFW", name: "Dallas Fort Worth International Airport", lat: 32.892895, lon: -97.038470 },
   { icao: "KCLT", name: "Charlotte Douglas International Airport", lat: 35.216312, lon: -80.952918 },
-
+  { icao: "KATL", name: "Hartsfield-Jackson Atlanta International Airport", lat: 33.632864, lon: -84.432782 },
+  { icao: "KHVN", name: "Tweed New Haven Airport", lat: 41.263119, lon: -72.886435 },
+  { icao: "KACY", name: "Atlantic City International AIrport", lat: 39.452864, lon: -74.571563 },
 
 ];
 export default function App() {
