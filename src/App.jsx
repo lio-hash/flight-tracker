@@ -127,7 +127,7 @@ const airports = [
   { icao: "KSTL", name: "St. Louis Lambert International Airport", lat: 38.748697, lon: -90.370028 },
   { icao: "KTPA", name: "Tampa International Airport", lat: 27.975476, lon: -82.533205 },
   { icao: "KCLL", name: "Easterwood Airport", lat: 30.588611, lon: -96.363056 },
-  { icao: "KSJC", name: "San Jose International Airport", lat: 37.3626, lon: -121.9290 },
+  { icao: "KSJC", name: "San Jose Mineta International Airport", lat: 37.3626, lon: -121.9290 },
   { icao: "KSAN", name: "San Diego International Airport", lat: 32.7338, lon: -117.1933 },
   { icao: "KPDX", name: "Portland International Airport", lat: 45.5887, lon: -122.5975 },
   { icao: "KMSY", name: "Louis Armstrong New Orleans International Airport", lat: 29.9934, lon: -90.2580 },
@@ -148,6 +148,12 @@ const airports = [
   {icao: "MROC", name: "Juan Santamaría International Airport", lat: 9.9939, lon: -84.2088 },
   {icao: "MMMX", name: "Mexico City International Airport", lat: 19.4361, lon: -99.0719 },
   {icao: "MMUN", name: "Cancún International Airport", lat: 21.0365, lon: -86.8771 },
+  {icao: "MMGL", name: "General Rafael Buelna International Airport", lat: 22.1568, lon: -105.2583 },
+  {icao: "MMMT", name: "General Francisco J. Mujica International Airport", lat: 19.8497, lon: -102.2556 },
+  {icao: "MMMY", name: "General Mariano Escobedo International Airport", lat: 25.7781, lon: -100.1067 },
+  {icao: "MMPR", name: "Licenciado Gustavo Díaz Ordaz International Airport", lat: 20.8864, lon: -105.2542 },
+  {icao: "MMES", name: "General Rodolfo Sánchez Taboada International Airport", lat: 32.5149, lon: -117.0382 },
+  {icao: "MMHO", name: "General Ignacio Pesqueira García International Airport", lat: 29.0958, lon: -110.9617 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
@@ -229,7 +235,7 @@ if (cs.match(/SAM|SCH|SCHD|SCHM|SCHP|RCH/)) {
   }
 
   // Commercial airlines
-  if (cs.match(/AAL|DAL|UAL|SWA|JBU|FFT|ASA|POE|NKS|ROU|AAY|SCX|LPE|VOI|TAP|GXA|CFG|PDT|EIN|BAW|KAL|AFR|JSX|MXY|FLE|ACA|ENY|WJA|TAM|TAI|EDV|BHS|VXP|AVA|RPA|TFL|THY/)) {
+  if (cs.match(/AAL|DAL|UAL|SWA|JBU|FFT|ASA|POE|NKS|ROU|AAY|SCX|LPE|VOI|TAP|GXA|CFG|PDT|EIN|BAW|KAL|AFR|JSX|MXY|FLE|ACA|ENY|WJA|TAM|TAI|EDV|BHS|VXP|AVA|RPA|TFL|THY|AZU/)) {
     return "Passenger";
   }
 // Business jet
