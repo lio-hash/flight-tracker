@@ -154,6 +154,7 @@ const airports = [
   {icao: "MMPR", name: "Licenciado Gustavo Díaz Ordaz International Airport", lat: 20.8864, lon: -105.2542 },
   {icao: "MMES", name: "General Rodolfo Sánchez Taboada International Airport", lat: 32.5149, lon: -117.0382 },
   {icao: "MMHO", name: "General Ignacio Pesqueira García International Airport", lat: 29.0958, lon: -110.9617 },
+  {icao: "MMBT", name: "General Abelardo L. Rodríguez International Airport", lat: 32.5336, lon: -116.9805 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
