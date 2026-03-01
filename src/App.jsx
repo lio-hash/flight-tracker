@@ -114,7 +114,12 @@ const airports = [
   { icao: "KATL", name: "Hartsfield-Jackson Atlanta International Airport", lat: 33.632864, lon: -84.432782 },
   { icao: "KHVN", name: "Tweed New Haven Airport", lat: 41.263119, lon: -72.886435 },
   { icao: "KACY", name: "Atlantic City International AIrport", lat: 39.452864, lon: -74.571563 },
-
+  { icao: "KILG", name: "Wilmington Airport", lat: 39.678778, lon: -75.606320 },
+  { icao: "JAX", name: "Jacksonville International Airport", lat: 30.494194, lon: -81.686985 },
+  { icao: "KIAD", name: "Washington Dulles International Airport", lat: 38.944533, lon: -77.455806 },
+  { icao: "KBWI", name: "Baltimore/Washington International Thurgood Marshall Airport", lat: 39.175361, lon: -76.668333 },
+  { icao: "KDCA", name: "Ronald Reagan Washington National Airport", lat: 38.852083, lon: -77.037722 },
+  { icao: "KORD", name: "Chicago O'Hare International Airport", lat: 41.974162, lon: -87.907321 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
