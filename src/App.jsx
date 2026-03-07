@@ -148,6 +148,7 @@ const airports = [
   {icao: "MROC", name: "Juan Santamaría International Airport", lat: 9.9939, lon: -84.2088 },
   {icao: "MMMX", name: "Mexico City International Airport", lat: 19.4361, lon: -99.0719 },
   {icao: "MMUN", name: "Cancún International Airport", lat: 21.0365, lon: -86.8771 },
+  {icao: "KBNA", name: "Nashville International Airport", lat: 36.1263, lon: -86.6782 },
  
 ];
 export default function App() {
