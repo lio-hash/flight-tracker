@@ -149,7 +149,9 @@ const airports = [
   {icao: "MMMX", name: "Mexico City International Airport", lat: 19.4361, lon: -99.0719 },
   {icao: "MMUN", name: "Cancún International Airport", lat: 21.0365, lon: -86.8771 },
   {icao: "KBNA", name: "Nashville International Airport", lat: 36.1263, lon: -86.6782 },
- 
+  {icao: "KIND", name: "Indianapolis International Airport", lat: 39.7173, lon: -86.2944 },
+  {icao: "KSDF", name: "Louisville Muhammad Ali International Airport", lat: 38.1741, lon: -85.7360 },
+
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
