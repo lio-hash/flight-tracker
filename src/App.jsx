@@ -152,6 +152,7 @@ const airports = [
   {icao: "KIND", name: "Indianapolis International Airport", lat: 39.7173, lon: -86.2944 },
   {icao: "KSDF", name: "Louisville Muhammad Ali International Airport", lat: 38.1741, lon: -85.7360 },
   {icao: "KMDF", name: "Tampa McDill Air Force Base", lat: 27.8492, lon: -82.5218 },
+  {icao: "KSPG", name: "Albert Whitted Airport", lat: 27.7706, lon: -82.6556 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
