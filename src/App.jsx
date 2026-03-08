@@ -174,6 +174,7 @@ const airports = [
   {icao: "CYOW", name: "Ottawa Macdonald-Cartier International Airport", lat: 45.3225, lon: -75.6692 },
   {icao: "KDAL", name: "Dallas Love Field Airport", lat: 32.8471, lon: -96.8517 },
   {icao: "KAUS", name: "Austin-Bergstrom International Airport", lat: 30.1945, lon: -97.6699 },
+  {icao: "KSAT", name: "San Antonio International Airport", lat: 29.5337, lon: -98.4698 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
