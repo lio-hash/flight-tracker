@@ -163,6 +163,9 @@ const airports = [
   {icao: "KSUA", name: "Witham Field Airport", lat: 27.178106, lon: -80.224590 },
   {icao: "KAPF", name: "Naples Municipal Airport", lat: 26.1522, lon: -81.7754 },
   {icao: "KHST", name: "Homestead Air Reserve Base", lat: 25.491764, lon: -80.387937 },
+  {icao: "KVRB", name: "Vero Beach Regional Airport", lat: 27.6555, lon: -80.4187 },
+  {icao: "KPGD", name: "Punta Gorda Airport", lat: 26.919016, lon: -81.996164 },
+  {icao: "KEYW", name: "Key West International Airport", lat: 24.5561, lon: -81.7598 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
