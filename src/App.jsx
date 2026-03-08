@@ -159,6 +159,10 @@ const airports = [
   {icao: "KABY", name: "Southwest Georgia Regional Airport", lat: 31.5355, lon: -84.1948 },
   {icao: "KCEW", name: "Bob Sikes Airport", lat: 30.777564, lon: -86.522575 },
   {icao: "KTLH", name: "Tallahassee International Airport", lat: 30.3965, lon: -84.3504 },
+  {icao: "KNPA", name: "Pensacola Naval Air Station", lat: 30.3522, lon: -87.3169 },
+  {icao: "KSUA", name: "Witham Field Airport", lat: 27.178106, lon: -80.224590 },
+  {icao: "KAPF", name: "Naples Municipal Airport", lat: 26.1522, lon: -81.7754 },
+  {icao: "KHST", name: "Homestead Air Reserve Base", lat: 25.491764, lon: -80.387937 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
