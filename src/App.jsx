@@ -156,6 +156,9 @@ const airports = [
   {icao: "KSRQ", name: "Sarasota-Bradenton International Airport", lat: 27.3956, lon: -82.5542 },
   {icao: "KPIE", name: "St. Petersburg-Clearwater International Airport", lat: 27.9105, lon: -82.6879 },
   {icao: "KPNS", name: "Pensacola International Airport", lat: 30.4734, lon: -87.1866 },
+  {icao: "KABY", name: "Southwest Georgia Regional Airport", lat: 31.5355, lon: -84.1948 },
+  {icao: "KCEW", name: "Bob Sikes Airport", lat: 30.777564, lon: -86.522575 },
+  {icao: "KTLH", name: "Tallahassee International Airport", lat: 30.3965, lon: -84.3504 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
