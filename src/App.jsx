@@ -166,6 +166,7 @@ const airports = [
   {icao: "KVRB", name: "Vero Beach Regional Airport", lat: 27.6555, lon: -80.4187 },
   {icao: "KPGD", name: "Punta Gorda Airport", lat: 26.919016, lon: -81.996164 },
   {icao: "KEYW", name: "Key West International Airport", lat: 24.5561, lon: -81.7598 },
+  {icao: "KAPX", name: "Pellston Regional Airport", lat: 45.5708, lon: -84.7961 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
