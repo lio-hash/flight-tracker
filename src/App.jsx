@@ -168,6 +168,12 @@ const airports = [
   {icao: "KEYW", name: "Key West International Airport", lat: 24.5561, lon: -81.7598 },
   {icao: "KAPX", name: "Pellston Regional Airport", lat: 45.5708, lon: -84.7961 },
   {icao: "PANC", name: "Ted Stevens Anchorage International Airport", lat: 61.1744, lon: -149.9983 },
+  {icao: "CYVR", name: "Vancouver International Airport", lat: 49.1947, lon: -123.1792 },
+  {icao: "CYYZ", name: "Toronto Pearson International Airport", lat: 43.6777, lon: -79.6248 },
+  {icao: "CYUL", name: "Montréal-Pierre Elliott Trudeau International Airport", lat: 45.465687, lon: -73.747755 },
+  {icao: "CYOW", name: "Ottawa Macdonald-Cartier International Airport", lat: 45.3225, lon: -75.6692 },
+  {icao: "KDAL", name: "Dallas Love Field Airport", lat: 32.8471, lon: -96.8517 },
+  {icao: "KAUS", name: "Austin-Bergstrom International Airport", lat: 30.1945, lon: -97.6699 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
