@@ -167,6 +167,7 @@ const airports = [
   {icao: "KPGD", name: "Punta Gorda Airport", lat: 26.919016, lon: -81.996164 },
   {icao: "KEYW", name: "Key West International Airport", lat: 24.5561, lon: -81.7598 },
   {icao: "KAPX", name: "Pellston Regional Airport", lat: 45.5708, lon: -84.7961 },
+  {icao: "PANC", name: "Ted Stevens Anchorage International Airport", lat: 61.1744, lon: -149.9983 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
@@ -252,7 +253,7 @@ if (cs.match(/SAM|SCH|SCHD|SCHM|SCHP|RCH/)) {
     return "Passenger";
   }
 // Business jet
-if (cs.match(/EJA|LXJ|JTL|ASP|RNI|SGX|VJA|EJM|KOW|RKJ|NEW|HPJ|TCN|PVA|KNT|JRE/)) {
+if (cs.match(/EJA|LXJ|JTL|ASP|RNI|SGX|VJA|EJM|KOW|RKJ|NEW|HPJ|TCN|PVA|KNT|JRE|/)) {
   return "Business Jet"
   }
  
