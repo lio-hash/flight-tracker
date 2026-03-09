@@ -176,6 +176,8 @@ const airports = [
   {icao: "KAUS", name: "Austin-Bergstrom International Airport", lat: 30.1945, lon: -97.6699 },
   {icao: "KSAT", name: "San Antonio International Airport", lat: 29.5337, lon: -98.4698 },
   {icao: "KDTW", name: "Detroit Metropolitan Wayne County Airport", lat: 42.2162, lon: -83.3554 },
+  {icao: "CYYC", name: "Calgary International Airport", lat: 51.1139, lon: -114.0208 },
+  {icao: "CYHZ", name: "Halifax Stanfield International Airport", lat: 44.8808, lon: -63.5150 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
