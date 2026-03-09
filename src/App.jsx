@@ -175,6 +175,7 @@ const airports = [
   {icao: "KDAL", name: "Dallas Love Field Airport", lat: 32.8471, lon: -96.8517 },
   {icao: "KAUS", name: "Austin-Bergstrom International Airport", lat: 30.1945, lon: -97.6699 },
   {icao: "KSAT", name: "San Antonio International Airport", lat: 29.5337, lon: -98.4698 },
+  {icao: "KDTW", name: "Detroit Metropolitan Wayne County Airport", lat: 42.2162, lon: -83.3554 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
@@ -260,7 +261,7 @@ if (cs.match(/SAM|SCH|SCHD|SCHM|SCHP|RCH/)) {
     return "Passenger";
   }
 // Business jet
-if (cs.match(/EJA|LXJ|JTL|ASP|RNI|SGX|VJA|EJM|KOW|RKJ|NEW|HPJ|TCN|PVA|KNT|JRE|/)) {
+if (cs.match(/EJA|LXJ|JTL|ASP|RNI|SGX|VJA|EJM|KOW|RKJ|NEW|HPJ|TCN|PVA|KNT|JRE/)) {
   return "Business Jet"
   }
  
