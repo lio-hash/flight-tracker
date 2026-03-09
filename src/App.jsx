@@ -178,6 +178,7 @@ const airports = [
   {icao: "KDTW", name: "Detroit Metropolitan Wayne County Airport", lat: 42.2162, lon: -83.3554 },
   {icao: "CYYC", name: "Calgary International Airport", lat: 51.1139, lon: -114.0208 },
   {icao: "CYHZ", name: "Halifax Stanfield International Airport", lat: 44.8808, lon: -63.5150 },
+  {icao: "KMYR", name: "Myrtle Beach International Airport", lat: 33.6799, lon: -78.9288 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
