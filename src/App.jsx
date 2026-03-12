@@ -179,6 +179,9 @@ const airports = [
   {icao: "CYYC", name: "Calgary International Airport", lat: 51.1139, lon: -114.0208 },
   {icao: "CYHZ", name: "Halifax Stanfield International Airport", lat: 44.8808, lon: -63.5150 },
   {icao: "KMYR", name: "Myrtle Beach International Airport", lat: 33.6799, lon: -78.9288 },
+  {icao: "KORF", name: "Norfolk International Airport", lat: 36.8946, lon: -76.2019 },
+  {icao:  "KCHS", name: "Charleston International Airport", lat: 32.8986, lon: -80.0405 },
+  {icao: "KCHA", name: "Chattanooga Metropolitan Airport", lat: 35.0356, lon: -85.2032 },
 ];
 export default function App() {
   const [filter, setFilter] = useState("all");
