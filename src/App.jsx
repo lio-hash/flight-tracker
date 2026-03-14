@@ -114,7 +114,7 @@ const airports = [
   { icao: "KHVN", name: "Tweed New Haven Airport", lat: 41.263119, lon: -72.886435 },
   { icao: "KACY", name: "Atlantic City International AIrport", lat: 39.452864, lon: -74.571563 },
   { icao: "KILG", name: "Wilmington Airport", lat: 39.678778, lon: -75.606320 },
-  { icao: "JAX", name: "Jacksonville International Airport", lat: 30.494194, lon: -81.686985 },
+  { icao: "KJAX", name: "Jacksonville International Airport", lat: 30.494194, lon: -81.686985 },
   { icao: "KIAD", name: "Washington Dulles International Airport", lat: 38.944533, lon: -77.455806 },
   { icao: "KBWI", name: "Baltimore/Washington International Thurgood Marshall Airport", lat: 39.175361, lon: -76.668333 },
   { icao: "KDCA", name: "Ronald Reagan Washington National Airport", lat: 38.852083, lon: -77.037722 },
@@ -182,7 +182,11 @@ const airports = [
   {icao: "KORF", name: "Norfolk International Airport", lat: 36.8946, lon: -76.2019 },
   {icao:  "KCHS", name: "Charleston International Airport", lat: 32.8986, lon: -80.0405 },
   {icao: "KCHA", name: "Chattanooga Metropolitan Airport", lat: 35.0356, lon: -85.2032 },
-];
+  {icao: "KAVL", name: "Asheville Regional Airport", lat: 35.4362, lon: -82.5418 },
+  {icao: "KJQF", name: "Concord-Padgett Regional Airport", lat: 35.381540, lon: -80.711876 },
+  {icao: "KRDU", name: "Raleigh-Durham International Airport", lat: 35.880596, lon: -78.787058},
+  {icao: "KBDL", name: "Bradley International Airport", lat: 41.9389, lon: -72.6832 },
+]
 export default function App() {
   const [filter, setFilter] = useState("all");
   const [lat, setLat] = useState(26.649509);
@@ -271,7 +275,7 @@ if (cs.match(/EJA|LXJ|JTL|ASP|RNI|SGX|VJA|EJM|KOW|RKJ|NEW|HPJ|TCN|PVA|KNT|JRE/))
   return "Business Jet"
   }
  
-// Cargo
+// Cargo aircraft
 if (cs.match(/FDX|UPS|GTI|CKS|CSB|ABX/)) {
   return "Cargo"
   }
@@ -415,7 +419,7 @@ if (cs.match(/FDX|UPS|GTI|CKS|CSB|ABX/)) {
   <option value="General Aviation">General Aviation</option>
 </select>
 <option value="On Ground">On Ground</option>
-<option value="In Air">In Air</option>
+<option value="Airborne">Airborne</option>
         {lastUpdated && <span>Last updated: {lastUpdated}</span>}
       </div>
 
