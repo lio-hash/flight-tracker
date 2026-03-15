@@ -186,6 +186,7 @@ const airports = [
   {icao: "KJQF", name: "Concord-Padgett Regional Airport", lat: 35.381540, lon: -80.711876 },
   {icao: "KRDU", name: "Raleigh-Durham International Airport", lat: 35.880596, lon: -78.787058},
   {icao: "KBDL", name: "Bradley International Airport", lat: 41.9389, lon: -72.6832 },
+  {icao: "KPVD", name: "Theodore Francis Green State Airport", lat: 41.723669, lon:-71.427229 },
 ]
 export default function App() {
   const [filter, setFilter] = useState("all");
@@ -267,7 +268,7 @@ if (cs.match(/SAM|SCH|SCHD|SCHM|SCHP|RCH/)) {
   }
 
   // Commercial airlines
-  if (cs.match(/AAL|DAL|UAL|SWA|JBU|FFT|ASA|POE|NKS|ROU|AAY|SCX|LPE|VOI|TAP|GXA|CFG|PDT|EIN|BAW|KAL|AFR|JSX|MXY|FLE|ACA|ENY|WJA|TAM|TAI|EDV|BHS|VXP|AVA|RPA|TFL|THY|AZU/)) {
+  if (cs.match(/AAL|DAL|UAL|SWA|JBU|FFT|ASA|POE|NKS|ROU|AAY|SCX|LPE|VOI|TAP|GXA|CFG|PDT|EIN|BAW|KAL|AFR|JSX|MXY|FLE|ACA|ENY|WJA|TAM|TAI|EDV|BHS|VXP|AVA|RPA|TFL|THY|AZU|JIA/)) {
     return "Passenger";
   }
 // Business jet
