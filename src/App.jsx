@@ -187,6 +187,7 @@ const airports = [
   {icao: "KRDU", name: "Raleigh-Durham International Airport", lat: 35.880596, lon: -78.787058},
   {icao: "KBDL", name: "Bradley International Airport", lat: 41.9389, lon: -72.6832 },
   {icao: "KPVD", name: "Theodore Francis Green State Airport", lat: 41.723669, lon:-71.427229 },
+  {icao: "KOCF", name: "Ocala International Airport", lat: 29.1728, lon: -82.2241 },
 ]
 export default function App() {
   const [filter, setFilter] = useState("all");
