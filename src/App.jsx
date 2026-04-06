@@ -190,6 +190,7 @@ const airports = [
   {icao: "KOCF", name: "Ocala International Airport", lat: 29.1728, lon: -82.2241 },
   {icao: "KSSI", name: "Brunswick Golden Isles Airport", lat: 31.154664, lon: -81.387182 },
   {icao: "TNCA", name: "Queen Beatrix International Airport", lat: 12.503011, lon: -70.008422 },
+  {icao: "MYAM", name: "Marsh Harbour Airport", lat: 26.512452, lon: -77.079020 },
 ]
 export default function App() {
   const [filter, setFilter] = useState("all");
