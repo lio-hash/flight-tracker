@@ -191,6 +191,7 @@ const airports = [
   {icao: "KSSI", name: "Brunswick Golden Isles Airport", lat: 31.154664, lon: -81.387182 },
   {icao: "TNCA", name: "Queen Beatrix International Airport", lat: 12.503011, lon: -70.008422 },
   {icao: "MYAM", name: "Marsh Harbour Airport", lat: 26.512452, lon: -77.079020 },
+  {icao: "KPHK", name: "Palm Beach County Glades Airport", lat: 26.788351, lon:  -80.692271 },
 ]
 export default function App() {
   const [filter, setFilter] = useState("all");
