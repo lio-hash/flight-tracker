@@ -192,6 +192,7 @@ const airports = [
   {icao: "TNCA", name: "Queen Beatrix International Airport", lat: 12.503011, lon: -70.008422 },
   {icao: "MYAM", name: "Marsh Harbour Airport", lat: 26.512452, lon: -77.079020 },
   {icao: "KPHK", name: "Palm Beach County Glades Airport", lat: 26.788351, lon:  -80.692271 },
+  {icao: "KECP", name: "Panama City-Bay County International Airport", lat: 30.355366, lon: -85.798423 },
 ]
 export default function App() {
   const [filter, setFilter] = useState("all");
