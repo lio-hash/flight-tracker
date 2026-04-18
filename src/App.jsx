@@ -195,6 +195,7 @@ const airports = [
   {icao: "KECP", name: "Panama City-Bay County International Airport", lat: 30.355366, lon: -85.798423 },
   {icao: "KMKY", name: "Marco Island Airport", lat: 26.000584, lon: -81.675186 },
   {icao: "KMCN", name: "Middle Georgia Regional Airport", lat: 32.701049, lon: -83.650046 },
+  {icao: "KTCL", name: "Tuscaloosa Regional Airport", lat: 33.221597, lon: -87.610313 },
 ]
 export default function App() {
   const [filter, setFilter] = useState("all");
