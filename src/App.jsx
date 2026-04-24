@@ -198,6 +198,7 @@ const airports = [
   {icao: "KTCL", name: "Tuscaloosa Regional Airport", lat: 33.221597, lon: -87.610313 },
   {icao: "KSUS", name: "Spirit of St Louis Airport", lat: 38.663837, lon: -90.646475 },
   {icao: "KJLN", name: "Joplin Regional Airport", lat: 37.157281, lon:-94.502213 },
+  {icao: "KSGF", name: "Springfield-Branson National Airport", lat: 37.245462, lon: -93.391280 },
 ]
 export default function App() {
   const [filter, setFilter] = useState("all");
