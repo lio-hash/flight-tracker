@@ -200,6 +200,8 @@ const airports = [
   {icao: "KJLN", name: "Joplin Regional Airport", lat: 37.157281, lon:-94.502213 },
   {icao: "KSGF", name: "Springfield-Branson National Airport", lat: 37.245462, lon: -93.391280 },
   {icao: "KGYR", name: "Phoenix Goodyear Airport", lat: 33.424883, lon: -112.373796 },
+  {icao: "KIMM", name: "Immokalee Regional Airport", lat: 26.424645, lon: -81.404812 },
+  {icao: "EGCC", name: "Manchester Airport", lat: 53.355219, lon: -2.276853},
 ]
 export default function App() {
   const [filter, setFilter] = useState("all");
