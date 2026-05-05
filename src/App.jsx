@@ -203,6 +203,7 @@ const airports = [
   {icao: "KIMM", name: "Immokalee Regional Airport", lat: 26.424645, lon: -81.404812 },
   {icao: "EGCC", name: "Manchester Airport", lat: 53.355219, lon: -2.276853},
   {icao: "LFPG", name: "Paris Charles de Gaulle Airport", lat: 49.001481, lon: 2.560460},
+  {icao: "EGLL", name: "London Heathrow Airport", lat: 51.467807, lon: -0.455934},
 ]
 export default function App() {
   const [filter, setFilter] = useState("all");
