@@ -204,7 +204,8 @@ const airports = [
   {icao: "EGCC", name: "Manchester Airport", lat: 53.355219, lon: -2.276853},
   {icao: "LFPG", name: "Paris Charles de Gaulle Airport", lat: 49.001481, lon: 2.560460},
   {icao: "EGLL", name: "London Heathrow Airport", lat: 51.467807, lon: -0.455934},
-  {icao: "LEMD", name: "Madrid-Barajas Airport", lat: 40.489485, lon: -3.564176}
+  {icao: "LEMD", name: "Madrid-Barajas Airport", lat: 40.489485, lon: -3.564176},
+  {icao: "LSZH", name: "Zurich Airport", lat: 47.461416, lon: 8.550647},
 ]
 export default function App() {
   const [filter, setFilter] = useState("all");
