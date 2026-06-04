@@ -207,6 +207,7 @@ const airports = [
   {icao: "LEMD", name: "Madrid-Barajas Airport", lat: 40.489485, lon: -3.564176},
   {icao: "LSZH", name: "Zurich Airport", lat: 47.461416, lon: 8.550647},
   {icao: "RJTT", name: "Tokyo Haneda Airport", lat: 35.548103, lon: 139.778254},
+  {icao: "KSNA", name: "John Wayne AIrport", lat: 33.674563, lon: -117.869128},
 ]
 export default function App() {
   const [filter, setFilter] = useState("all");
@@ -288,7 +289,7 @@ if (cs.match(/SAM|SCH|SCHD|SCHM|SCHP|RCH/)) {
   }
 
   // Commercial airlines
-  if (cs.match(/AAL|DAL|UAL|SWA|JBU|FFT|ASA|POE|NKS|ROU|AAY|SCX|LPE|VOI|TAP|GXA|CFG|PDT|EIN|BAW|KAL|AFR|JSX|MXY|FLE|ACA|ENY|WJA|TAM|TAI|EDV|BHS|VXP|AVA|RPA|TFL|THY|AZU|JIA/)) {
+  if (cs.match(/AAL|DAL|UAL|SWA|JBU|FFT|ASA|POE|NKS|ROU|AAY|SCX|LPE|VOI|TAP|GXA|CFG|PDT|EIN|BAW|KAL|AFR|JSX|MXY|FLE|ACA|ENY|WJA|TAM|TAI|EDV|BHS|VXP|AVA|RPA|TFL|THY|AZU|JIA|VIR/)) {
     return "Passenger";
   }
 // Business jet
